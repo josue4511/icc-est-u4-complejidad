@@ -25,8 +25,8 @@
 
 ---
 
-## 3. icc-est-u4-complejidad
-![Aplicación desplegada](assets/cap.png)
+
+
 
 ## 3. icc-est-u4-complejidad
 ![Aplicación desplegada](assets/02-captura-demo.png)
