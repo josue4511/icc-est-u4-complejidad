@@ -1,19 +1,26 @@
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        int[]array = {1, 2, 3, 4, 5};
-        System.out.println(array);
-        System.out.println(array[0]);
 
-        // for Normal
-        for(int i=0; i<array.length; i++){
-            System.out.println(array[i]);
+        int cantidadEstudiantes = 30000000;
+        int cantidad = 1_000_000; 
+
+        List<Estudiante> estudiantes = Generador.generarListado(cantidadEstudiantes);
+
+        String nombreBuscar = "Estudiante_2900011";
+        int intentos = 0;
+
+        for (Estudiante est : estudiantes) {
+            if (est.nombre.equals(nombreBuscar)) {
+                System.out.println("Existe");
+                break;
+            } else {
+                intentos++;
+            }
         }
 
-        // for-each
-        for(int i: array){
-            System.out.println(i);
-            
-        }
+        System.out.println("Intentos: " + intentos);
+        System.out.println("Fin"); 
     }
 }
